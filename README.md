@@ -11,6 +11,8 @@ eg: cd Desktop/Github/Dash_Viz_GDPR
 python3 app.py
 then copy and paste the link it outputs in your browser. The changes will be shown automatically on the browser.
 
+
+
 ![alt text](https://raw.githubusercontent.com/lo1gr/Dash_Viz_GDPR/master/images/dashboard_screenshot.png)
 
 
