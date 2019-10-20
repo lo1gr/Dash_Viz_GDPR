@@ -163,36 +163,36 @@ def update_output_div(input_value):
     return {"data": fig, "layout": layout}
 
 
-
-@app.callback(
-    Output(component_id='new_radar', component_property='figure'),
-    [Input(component_id='dropdown2_1', component_property='value')
-     Input(component_id='dropdown2_2', component_property='value')]
-)
-def update_output_div(input_value):
-    fig = go.Figure()
-    fig = fig.add_trace([go.Scatterpolar(
-            r=[int(x) for x in list(df.loc[df['Policy'] == str(input_value)].iloc[:, 1:8].iloc[0])],
-            theta=gdpr_dim,
-            fill='toself'
-            )])
-    layout = {'title': 'GDPR viz for ' + input_value}
-
-    return {"data": fig, "layout": layout}
-
-
-fig.add_trace(go.Scatterpolar(
-      r=[1, 5, 2, 2, 3],
-      theta=categories,
-      fill='toself',
-      name='Product A'
-))
-fig.add_trace(go.Scatterpolar(
-      r=[4, 3, 2.5, 1, 2],
-      theta=categories,
-      fill='toself',
-      name='Product B'
-))
+#
+# @app.callback(
+#     Output(component_id='new_radar', component_property='figure'),
+#     [Input(component_id='dropdown2_1', component_property='value')
+#      Input(component_id='dropdown2_2', component_property='value')]
+# )
+# def update_output_div(input_value):
+#     fig = go.Figure()
+#     fig = fig.add_trace([go.Scatterpolar(
+#             r=[int(x) for x in list(df.loc[df['Policy'] == str(input_value)].iloc[:, 1:8].iloc[0])],
+#             theta=gdpr_dim,
+#             fill='toself'
+#             )])
+#     layout = {'title': 'GDPR viz for ' + input_value}
+#
+#     return {"data": fig, "layout": layout}
+#
+#
+# fig.add_trace(go.Scatterpolar(
+#       r=[1, 5, 2, 2, 3],
+#       theta=categories,
+#       fill='toself',
+#       name='Product A'
+# ))
+# fig.add_trace(go.Scatterpolar(
+#       r=[4, 3, 2.5, 1, 2],
+#       theta=categories,
+#       fill='toself',
+#       name='Product B'
+# ))
 
 
 if __name__ == '__main__':
